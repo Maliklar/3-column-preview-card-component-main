@@ -3,38 +3,117 @@
     --Brightorange: hsl(31, 77%, 52%);
     --Darkcyan: hsl(184, 100%, 22%);
     --Verydarkcyan: hsl(179, 100%, 13%);
-    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --paragraphs: hsla(0, 0%, 100%, 0.582);
     --headingsButtons: hsl(0, 0%, 95%);
     font-family: 'LexendDeca', sans-serif;
     font-size: 15px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--headingsButtons);
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top: 36px;
+    margin-bottom: 0px;
+    font-size: 2.65rem;
+}
+
+p {
+    color: var(--paragraphs);
+    margin-top: 26px;
+    line-height: 1.7rem;
+    max-width: 18ch;
+}
+
+button {
+    background-color: var(--headingsButtons);
+    padding: 16px 36px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    margin-top: auto;
+    cursor: pointer;
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    height: 100vh;
+    background-color: var(--headingsButtons);
 }
 
 main {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 300px;
-    margin: 0 18%;
-    /* align-items: center; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 auto;
+    border-radius: 100px;
+    border-radius: 100px;
 }
 
 .card {
-    background-color: red;
+    height: 504px;
+    width: 308px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #card1 {
     background-color: var(--Brightorange);
+    border-radius: 10px 0 0 10px;
+}
+
+#card1>button {
+    color: var(--Brightorange);
 }
 
 #card2 {
     background-color: var(--Darkcyan);
 }
 
+#card2>button {
+    color: var(--Darkcyan);
+}
+
 #card3 {
     background-color: var(--Verydarkcyan);
+    border-radius: 0 10px 10px 0;
+}
+
+#card3>button {
+    color: var(--Verydarkcyan);
+}
+
+#card1>button:hover {
+    background-color: transparent;
+    border: solid white 3px;
+    color: white;
+}
+
+#card2>button:hover {
+    background-color: transparent;
+    border: solid white 3px;
+    color: white;
+}
+
+#card3>button:hover {
+    background-color: transparent;
+    border: solid white 3px;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    #card1 {
+        border-radius: 10px 10px 0 0;
+    }
+    #card3 {
+        border-radius: 0 0 10px 10px;
+    }
 }
