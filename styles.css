@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --headingsButtons: hsl(0, 0%, 95%);
+    font-family: 'LexendDeca', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px;
+    margin: 0 18%;
+    /* align-items: center; */
+}
+
+.card {
+    background-color: red;
+}
+
+#card1 {
+    background-color: var(--Brightorange);
+}
+
+#card2 {
+    background-color: var(--Darkcyan);
+}
+
+#card3 {
+    background-color: var(--Verydarkcyan);
+}
